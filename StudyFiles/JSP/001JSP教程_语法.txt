@@ -210,4 +210,22 @@ plugin动作有多个对应HTML元素的属性用于格式化Java 组件。param
     </jsp:body>
     </jsp:element>
 
-    
+9.<jsp:text>动作元素
+<jsp:text>动作元素允许在JSP页面和文档中使用写入文本的模板，语法格式如下：
+<jsp:text>模板数据</jsp:text>
+
+<jsp:text><![CDATA[<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"DTD/xhtml1-strict.dtd">]]>
+</jsp:text>
+<head><title>jsp:text action</title></head>
+<body>
+
+<books><book><jsp:text>  
+    Welcome to JSP Programming
+</jsp:text></book></books>
+
+</body>
+</html>
+
+
