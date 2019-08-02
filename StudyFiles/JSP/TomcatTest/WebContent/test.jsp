@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page import="java.io.*,java.util.*,java.text.*"  %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -93,6 +94,96 @@ fontSize =<%= fontSize %><br>
 <books><book><jsp:text>  
     Welcome to JSP Programming
 </jsp:text></book></books>
+
+<h2>HTTP 头部请求实例</h2>
+
+<table width="100%" border="1" align="center">
+<tr bgcolor="#949494">
+<th>Header Name</th>
+<th>Header Value(s)</th>
+</tr>
+<%
+out.println("端口号port:" + request.getServerPort());
+out.println("刷新:" + request.getIntHeader("Refresh"));
+Enumeration headerNames = request.getHeaderNames();
+while(headerNames.hasMoreElements()){
+	String paramName = (String)headerNames.nextElement();
+	out.println("<tr><td>" + paramName + "</td>\n");
+	String paramValue = request.getHeader(paramName);
+	out.println("<td>" + paramValue + "</td></tr>\n");
+}
+%>
+</table>
+
+<h2>自动刷新实例</h2>
+<%
+//设置每隔5s自动刷新
+response.setIntHeader("Refresh", 10);
+//获取当前时间
+Calendar calendar = new GregorianCalendar();
+String am_pm;
+SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.CHINA);
+int hour = calendar.get(Calendar.HOUR);
+int minute = calendar.get(Calendar.MINUTE);
+int second = calendar.get(Calendar.SECOND);
+if(calendar.get(Calendar.AM_PM) == 0)
+	am_pm = "AM";
+else
+	am_pm = "PM";
+String CT = hour+":"+minute+":"+second+" "+am_pm;
+out.println("当前时间：" + CT + "\n" + "具体时间：" + format.format(calendar.getTime()) + "\n");
+response.reset();
+response.setCharacterEncoding("UTF-8");
+%>
+
+<%
+   // 设置错误代码，并说明原因
+   // response.sendError(407, "Need authentication!!!" );
+%>
+<br>
+
+<h2>使用 POST</h2>
+<form action="main.jsp" method="POST">
+站点名: <input type="text" name="name">
+<br />
+网址: <input type="text" name="url" />
+<input type="submit" value="提交" />
+</form>
+
+<h1>使用 GET 方法读取数据</h1>
+<ul>
+<li><p>
+<b>站点名：</b>
+<%= request.getParameter("name") %>
+</p></li>
+<li><p>
+<b>网址：</b>
+<%= request.getParameter("url") %>
+</p></li>
+</ul>
+
+<h1>从复选框中读取数据</h1>
+<ul>
+<li><p><b>Google 是否选中：</b><%=request.getParameter("google") %></p></li>
+<li><p><b>百度  是否选中：</b><%=request.getParameter("baidu") %></p></li>
+<li><p><b>淘宝  是否选中：</b><%=request.getParameter("taobao") %></p></li>
+</ul>
+
+<h1>读取所有表单参数</h1>
+<table width="100%" border="1" align="center">
+<tr bgcolor="#949494">
+<th>参数名</th><th>参数值</th>
+</tr>
+<%
+ Enumeration paramNames = request.getParameterNames();
+ while(paramNames.hasMoreElements()){
+	 String paramName = (String)paramNames.nextElement();
+	 out.print("<tr><td>" + paramName +"</td>\n");
+	 String paramValue = request.getParameter(paramName) ;
+	 out.println("<td>" + paramValue + "</td></tr>\n");
+ }
+%>
+</table>
 
 </body>
 </html>
