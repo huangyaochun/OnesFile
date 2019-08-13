@@ -555,11 +555,118 @@ JSP使用getParameter()来获得传递的参数，getInputStream()方法用来�
     getInputStream():调用此方法来读取来自客户端的二进制数据流。
 
 
+*********************》》009：JSP 过滤器
+JSP 和 Servlet 中的过滤器都是 Java 类。
+过滤器可以动态地拦截请求和响应，以变换或使用包含在请求或响应中的信息。
+可以将一个或多个过滤器附加到一个 Servlet 或一组 Servlet。过滤器也可以附加到 JavaServer Pages (JSP) 文件和 HTML 页面。
 
+1.Servlet 过滤器方法
+过滤器是一个实现了 javax.servlet.Filter 接口的 Java 类。javax.servlet.Filter 接口定义了三个方法：
+1)	public void doFilter (ServletRequest, ServletResponse, FilterChain)
+该方法完成实际的过滤操作，当客户端请求方法与过滤器设置匹配的URL时，Servlet 容器将先调用过滤器的 doFilter 方法。FilterChain 用于访问后续过滤器。
+2)	public void init(FilterConfig filterConfig)
+web 应用程序启动时，web 服务器将创建Filter 的实例对象，并调用其init方法，读取web.xml配置，完成对象的初始化功能，从而为后续的用户请求作好拦截的准备工作（filter对象只会创建一次，init方法也只会执行一次）。开发人员通过init方法的参数，可获得代表当前filter配置信息的FilterConfig对象。
+3)	public void destroy()
+Servlet容器在销毁过滤器实例前调用该方法，在该方法中释放Servlet过滤器占用的资源。
 
+2.过滤器的应用顺序
+web.xml 中的 filter-mapping 元素的顺序决定了 Web 容器应用过滤器到 Servlet 的顺序。若要反转过滤器的顺序，您只需要在 web.xml 文件中反转 filter-mapping 元素即可。
 
+3.web.xml配置各节点说明
+    <filter>指定一个过滤器。
+        <filter-name>用于为过滤器指定一个名字，该元素的内容不能为空。
+        <filter-class>元素用于指定过滤器的完整的限定类名。
+        <init-param>元素用于为过滤器指定初始化参数，它的子元素<param-name>指定参数的名字，<param-value>指定参数的值。
+        在过滤器中，可以使用FilterConfig接口对象来访问初始化参数。
+    <filter-mapping>元素用于设置一个 Filter 所负责拦截的资源。一个Filter拦截的资源可通过两种方式来指定：Servlet 名称和资源访问的请求路径
+        <filter-name>子元素用于设置filter的注册名称。该值必须是在<filter>元素中声明过的过滤器的名字
+        <url-pattern>设置 filter 所拦截的请求路径(过滤器关联的URL样式)
+    <servlet-name>指定过滤器所拦截的Servlet名称。
+    <dispatcher>指定过滤器所拦截的资源被 Servlet 容器调用的方式，可以是REQUEST,INCLUDE,FORWARD和ERROR之一，默认REQUEST。用户可以设置多个<dispatcher>子元素用来指定 Filter 对资源的多种调用方式进行拦截。
+    <dispatcher>子元素可以设置的值及其意义
+        REQUEST：当用户直接访问页面时，Web容器将会调用过滤器。如果目标资源是通过RequestDispatcher的include()或forward()方法访问时，那么该过滤器就不会被调用。
+        INCLUDE：如果目标资源是通过RequestDispatcher的include()方法访问时，那么该过滤器将被调用。除此之外，该过滤器不会被调用。
+        FORWARD：如果目标资源是通过RequestDispatcher的forward()方法访问时，那么该过滤器将被调用，除此之外，该过滤器不会被调用。
+        ERROR：如果目标资源是通过声明式异常处理机制调用时，那么该过滤器将被调用。除此之外，过滤器不会被调用。
 
+4.总结：
+一、Filter 的基本工作原理
+    1、Filter 程序是一个实现了特殊接口的 Java 类，与 Servlet 类似，也是由 Servlet 容器进行调用和执行的。
+    2、当在 web.xml 注册了一个 Filter 来对某个 Servlet 程序进行拦截处理时，它可以决定是否将请求继续传递给 Servlet 程序，以及对请求和响应消息是否进行修改。
+    3、当 Servlet 容器开始调用某个 Servlet 程序时，如果发现已经注册了一个 Filter 程序来对该 Servlet 进行拦截，那么容器不再直接调用 Servlet 的 service 方法，而是调用 Filter 的 doFilter 方法，再由 doFilter 方法决定是否去激活 service 方法。
+    4、但在 Filter.doFilter 方法中不能直接调用 Servlet 的 service 方法，而是调用 FilterChain.doFilter 方法来激活目标 Servlet 的 service 方法，FilterChain 对象时通过 Filter.doFilter 方法的参数传递进来的。
+    5、只要在 Filter.doFilter 方法中调用 FilterChain.doFilter 方法的语句前后增加某些程序代码，这样就可以在 Servlet 进行响应前后实现某些特殊功能。
+    6、如果在 Filter.doFilter 方法中没有调用 FilterChain.doFilter 方法，则目标 Servlet 的 service 方法不会被执行，这样通过 Filter 就可以阻止某些非法的访问请求。
 
+二、Filter 链
+    1、在一个 Web 应用程序中可以注册多个 Filter 程序，每个 Filter 程序都可以对一个或一组 Servlet 程序进行拦截。如果有多个 Filter 程序都可以对某个 Servlet 程序的访问过程进行拦截，当针对该 Servlet 的访问请求到达时，Web 容器将把这多个 Filter 程序组合成一个 Filter 链（也叫过滤器链）。
+    2、Filter 链中的各个 Filter 的拦截顺序与它们在 web.xml 文件中的映射顺序一致，上一个 Filter.doFilter 方法中调用 FilterChain.doFilter 方法将激活下一个 Filter的doFilter 方法，最后一个 Filter.doFilter 方法中调用的 FilterChain.doFilter 方法将激活目标 Servlet的service 方法。
+    3、只要 Filter 链中任意一个 Filter 没有调用 FilterChain.doFilter 方法，则目标 Servlet 的 service 方法都不会被执行。
 
+三、Filter 接口
+    一个 Filter 程序就是一个 Java 类，这个类必须实现 Filter 接口。javax.servlet.Filter 接口中定义了三个方法：init、doFilter、destory。
+    1、init 方法
+    （1）、在 Web 应用程序启动时，Web 服务器（Web 容器）将根据其 web.xml 文件的配置信息来创建每个注册的 Filter 的实例对象，并将其保存在内存中。
+    （2）、Web 容器创建 Filter 的实例对象后，将立即调用该 Filter 对象的 init 方法。init 方法在 Filter 生命周期中仅被执行一次，Web 容器在调用 init 方法时，会传递一个包含 Filter 的配置和运行环境信息的 FilterConfig 对象。
+    public void init(FilterConfig filterConfig) throws ServletException
+    （3）开发人员可以在 init 方法中完成与构造方法类似的初始化功能，要注意的是：如果初始化代码要使用到 FilterConfig 对象，这些代码只能在 init 方法中编写，而不能在构造方法中编写（尚未调用 init 方法，即并没有创建 FilterConfig 对象，要使用它则必然出错）。 
+    2、doFilter 方法
+    当一个 Filter 对象能够拦截访问请求时，Servlet 容器将调用 Filter 对象的 doFilter 方法。
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws java.io.IOException.ServletException
+    其中，参数 request 和 response 为 Web 容器或 Filter 链中上一个 Filter 传递过来的请求和响应对象；参数 chain 为代表当前 Filter 链的对象。
+    3、destroy 方法
+    该方法在 Web 容器卸载 Filter 对象之前被调用，也仅执行一次。可以完成与 init 方法相反的功能，释放被该 Filter 对象打开的资源，例如：关闭数据库连接和 IO 流。
 
+四、FilterChain 接口
+    该接口用于定义一个 Filter 链的对象应该对外提供的方法，这个接口只定义了一个 doFilter 方法。
+    public void doFilter(ServletRequest request, ServletResponse response) throws java.io.IOException.ServletException
+    FilterChain 接口的 doFilter 方法用于通知 Web 容器把请求交给 Filter 链中的下一个 Filter 去处理，如果当前调用此方法的 Filter 对象是Filter 链中的最后一个 Filter，那么将把请求交给目标 Servlet 程序去处理。
 
+五、FilterConfig 接口
+    1、与普通的 Servlet 程序一样，Filter 程序也很可能需要访问 Servlet 容器。Servlet 规范将代表 ServletContext 对象和 Filter 的配置参数信息都封装到一个称为 FilterConfig 的对象中。
+    2、FilterConfig 接口则用于定义 FilterConfig 对象应该对外提供的方法，以便在 Filter 程序中可以调用这些方法来获取 ServletContext 对象，以及获取在 web.xml 文件中为 Filter 设置的友好名称和初始化参数。
+    3、FilterConfig接口定义的各个方法：
+        getFilterName 方法，返回 <filter-name> 元素的设置值。
+        getServletContext 方法，返回 FilterConfig 对象中所包装的 ServletContext 对象的引用。
+        getInitParameter 方法，用于返回在 web.xml 文件中为 Filter 所设置的某个名称的初始化的参数值。
+        getInitParameterNames 方法，返回一个 Enumeration 集合对象。
+
+六、Filter 的注册与映射
+    1、注册 Filter
+    一个 <filter> 元素用于注册一个 Filter。其中，<filter-name> 元素是必需的，<filter-class> 元素也是必需的，<init-param> 元素是可选的，可以有多个 < init-param> 元素。
+        <filter>
+            <filter-name>FirstFilter</filter-name>
+            <filter-class>FirstFilter</filter-class>
+            <init-param>
+                <param-name>encoding</param-name>
+                <param-value>GB2312</param-value>
+            </init-param>
+        </filter>
+    2、映射 Filter
+    <filter-mapping> 元素用于设置一个 Filter 所负责拦截的资源。一个 Filter 拦截的资源可以通过两种方式来指定：资源的访问请求路径和 Servlet 名称。
+    第一种：指定资源的访问路径
+        <filter-mapping>
+            <filter-name>FirstFilter</filter-name>
+            <url-pattern>/*</url-pattern>
+        </filter-mapping>   
+    <url-pattern> 元素中的访问路径的设置方式遵循 Servlet 的 URL 映射规范。
+    /*：表示拦截所有的访问请求。
+    /filter/*：表示拦截 filter 目录下的所有访问请求，如：http://localhost:8888/testFilter_001/filter/xxxxxx 。
+    /test.html：表示拦截根目录下以 test.html 为资源名的访问请求，访问链接只会是：http://localhost:8888/test.html。
+    第二种：指定 Servlet 的名称
+        <filter-mapping>
+            <filter-name>FirstFilter</filter-name>
+            <servlet-name>default></servlet-name>
+            <dispatcher>INCLUDE</dispatcher>
+            <dispatcher>REQUEST</dispatcher>
+        </filter-mapping>
+    （1）、<servlet-name> 元素与 <url-pattern> 元素是二选一的关系，其值是某个 Servlet 在 web.xml 文件中的注册名称。
+    （2）、<dispatcher> 元素的设置值有 4 种：REQUEST、INCLUDE、FORWARD、ERROR，分别对应 Servlet 容器调用资源的 4 种方式：
+    通过正常的访问请求调用；
+    通过 RequestDispatcher.include 方法调用；
+    通过 RequestDispatcher.forward 方法调用；
+    作为错误响应资源调用。
+    如果没有设置 <dispatcher> 子元素，则等效于 REQUEST 的情况。也可以设置多个 <dispatcher> 子元素，用于指定 Filter 对资源的多种调用方式都进行拦截。
+    
+    
+*********************》》010：JSP Cookie 处理

@@ -1,6 +1,8 @@
 package com.hycjsp.test;
 
 import java.io.IOException;
+
+import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -39,5 +41,11 @@ public class HelloServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
+	
+/*	public void init(FilterConfig config){
+		//获取初始化参数
+		String site = config.getInitParameter("site");
+		System.out.println("网站名称：" + site );
+	}*/
 
 }
