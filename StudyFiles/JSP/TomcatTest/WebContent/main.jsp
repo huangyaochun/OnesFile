@@ -13,6 +13,10 @@ Cookie url = new Cookie("url",request.getParameter("url"));
 //设置cookie过期时间为 24小时 = 60*60*24
 name2.setMaxAge(10);
 url.setMaxAge(10);
+
+// 在响应头部添加cookie
+response.addCookie(name2);
+response.addCookie( url );
 %>
 
 
