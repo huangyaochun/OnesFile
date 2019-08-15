@@ -185,5 +185,60 @@ response.setCharacterEncoding("UTF-8");
 %>
 </table>
 
+<%
+//获取session创建时间
+Date createTime = new Date(session.getCreationTime());
+//获取最后访问页面的时间
+Date lastAccessTime = new Date(session.getLastAccessedTime());
+
+String title = "再次访问session教程实例";
+Integer visitCount = new Integer(0);
+String visitCountKey = new String("visitCount");
+String userIDKey = new String("userID");
+String userID = new String("ABCD");
+
+//检测网页是否有新的访问用户
+if(session.isNew()){
+	title = "访问session教程实例";
+	//使用指定的名称和值来产生一个对象并绑定到session中
+	session.setAttribute(userIDKey, userID); 
+	session.setAttribute(visitCountKey, visitCount);
+}else{
+	//返回session对象中与指定名称绑定的对象，如果不存在则返回null
+	visitCount = (Integer)session.getAttribute(visitCountKey);
+	visitCount += 1;
+	userID = (String)session.getAttribute(userIDKey);
+	session.setAttribute(visitCountKey, visitCount);
+}
+%>
+
+<h1>Session 跟踪</h1>
+<table border="1" align="center">
+<tr bgcolor="#949494">
+	<th>Session 信息</th>
+	<th>值</th>
+</tr>
+<tr>
+	<td>id</td>
+	<td><%out.print(session.getId()); %></td>
+</tr>
+<tr>
+	<td>创建时间</td>
+	<td><%out.print(createTime); %></td>
+</tr>
+<tr>
+	<td>最后访问时间</td>
+	<td><%out.print(lastAccessTime); %></td>
+</tr>
+<tr>
+	<td>用户ID</td>
+	<td><%out.print(userID); %></td>
+</tr>
+<tr>
+	<td>访问次数</td>
+	<td><%out.print(visitCount); %></td>
+</tr>
+</table>
+
 </body>
 </html>
