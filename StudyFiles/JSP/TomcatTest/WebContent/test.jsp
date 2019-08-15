@@ -116,6 +116,7 @@ while(headerNames.hasMoreElements()){
 </table>
 
 <h2>自动刷新实例</h2>
+<%--
 <%
 //设置每隔5s自动刷新
 response.setIntHeader("Refresh", 10);
@@ -135,7 +136,7 @@ out.println("当前时间：" + CT + "\n" + "具体时间：" + format.format(ca
 response.reset();
 response.setCharacterEncoding("UTF-8");
 %>
-
+--%>
 <%
    // 设置错误代码，并说明原因
    // response.sendError(407, "Need authentication!!!" );
