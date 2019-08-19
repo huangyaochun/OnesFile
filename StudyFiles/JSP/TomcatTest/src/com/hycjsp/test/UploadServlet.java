@@ -59,7 +59,7 @@ public class UploadServlet extends HttpServlet {
 		upload.setHeaderEncoding("UTF-8");
 		
 		//构造临时路径来存储上传的文件  这个路径相对于当前应用的目录
-		String uploadPath = getServletContext().getRealPath("/") + File.separator + UPLOAD_DIRECTORY;
+		String uploadPath = getServletContext().getRealPath(File.separator)+ File.separator + UPLOAD_DIRECTORY;
 		
 		//如果目录不存在则创建
 		File uploadDir = new File(uploadPath);
@@ -95,7 +95,7 @@ public class UploadServlet extends HttpServlet {
 		
 		//跳转到message.jsp
 		//doGet(request, response);
-		getServletContext().getRequestDispatcher("/test.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/message.jsp").forward(request, response);
 	}
 
 }

@@ -241,5 +241,11 @@ if(session.isNew()){
 </tr>
 </table>
 
+	<form action="upload.jsp" method="POST">
+		是否上传文件: 
+		<input type="submit" value="是" name="url">
+	<input type="button" value="否" name="name"/>
+	</form>
+
 </body>
 </html>
