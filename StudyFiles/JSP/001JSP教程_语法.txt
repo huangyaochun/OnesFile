@@ -813,3 +813,8 @@ JSP 可以与 HTML form 标签一起使用，来允许用户上传文件到服�
 
 注意：添加上面两个jar的时候，注意添加到 WEB-INF 下 lib 目录里面，并添加到 build path，否则会报错:
 java.lang.ClassNotFoundException: org.apache.commons.fileupload.servlet.ServletFileUpload
+
+
+*********************》》012：JSP 日期处理
+使用JSP最重要的优势之一，就是可以使用所有Java  API。本章将会详细地讲述Java中的Date类，它在java.util包下，封装了当前日期和时间。
+Date类有两个构造函数。第一个构造函数使用当前日期和时间来初始化对象。
