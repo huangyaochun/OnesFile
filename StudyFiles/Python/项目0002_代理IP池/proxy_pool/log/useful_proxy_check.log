@@ -1,0 +1,422 @@
+2019-09-24 11:18:31,440 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_1  : start
+2019-09-24 11:18:31,439 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_0  : start
+2019-09-24 11:18:31,445 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_2  : start
+2019-09-24 11:18:31,464 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_4  : start
+2019-09-24 11:18:31,463 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_3  : start
+2019-09-24 11:18:31,469 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_5  : start
+2019-09-24 11:18:31,473 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_6  : start
+2019-09-24 11:18:31,482 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_7  : start
+2019-09-24 11:18:31,585 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_8  : start
+2019-09-24 11:18:31,624 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_9  : start
+2019-09-24 11:18:31,640 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_3  : 218.95.37.227:3128   validation pass
+2019-09-24 11:18:31,678 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_8  : 175.10.25.1:3128     validation fail
+2019-09-24 11:18:31,679 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 111.29.3.220:8080    validation pass
+2019-09-24 11:18:31,720 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 121.15.254.156:888   validation pass
+2019-09-24 11:18:31,814 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 39.137.69.10:8080    validation pass
+2019-09-24 11:18:31,847 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 111.29.3.190:80      validation pass
+2019-09-24 11:18:31,906 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 111.29.3.185:8080    validation pass
+2019-09-24 11:18:32,034 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_3  : 220.143.171.188:3128 validation pass
+2019-09-24 11:18:32,099 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 39.135.24.11:8080    validation pass
+2019-09-24 11:18:32,271 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 111.29.3.189:8080    validation pass
+2019-09-24 11:18:32,330 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 115.219.75.204:61234 validation pass
+2019-09-24 11:18:32,370 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 39.105.149.68:8888   validation pass
+2019-09-24 11:18:32,476 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 47.110.130.152:8080  validation pass
+2019-09-24 11:18:32,668 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_2  : 113.140.1.82:53281   validation pass
+2019-09-24 11:18:36,778 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 123.117.39.111:9000  validation pass
+2019-09-24 11:18:36,910 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 47.110.59.21:8080    validation pass
+2019-09-24 11:18:37,130 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_2  : 222.184.7.206:43327  validation pass
+2019-09-24 11:18:37,486 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 175.102.3.98:8089    validation pass
+2019-09-24 11:18:37,716 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 27.191.234.69:9999   validation pass
+2019-09-24 11:18:37,829 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_8  : 114.106.79.125:61234 validation fail
+2019-09-24 11:18:40,260 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 120.198.76.45:41443  validation pass
+2019-09-24 11:18:40,501 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 124.205.155.158:9090 validation pass
+2019-09-24 11:18:40,671 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 119.179.150.143:8060 validation pass
+2019-09-24 11:18:40,918 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 111.29.3.192:8080    validation pass
+2019-09-24 11:18:40,929 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_3  : 222.240.184.126:8086 validation pass
+2019-09-24 11:18:41,482 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_4  : 121.69.37.6:9797     validation fail
+2019-09-24 11:18:41,514 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 61.178.149.237:59042 validation pass
+2019-09-24 11:18:41,616 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_5  : 42.228.3.158:8080    validation fail
+2019-09-24 11:18:41,860 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_4  : 117.191.11.107:8080  validation pass
+2019-09-24 11:18:42,283 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_9  : 218.58.194.162:8060  validation fail
+2019-09-24 11:18:42,490 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_6  : 171.35.162.246:9999  validation fail
+2019-09-24 11:18:42,995 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 119.27.177.238:8080  validation pass
+2019-09-24 11:18:43,103 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 210.26.49.88:3128    validation pass
+2019-09-24 11:18:43,198 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_8  : 120.25.90.253:8118   validation fail
+2019-09-24 11:18:43,488 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 58.56.149.198:53281  validation pass
+2019-09-24 11:18:43,614 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_6  : 183.143.62.71:8118   validation fail
+2019-09-24 11:18:43,717 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_6  : 125.123.123.199:9999 validation fail
+2019-09-24 11:18:44,044 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 211.101.154.105:43598 validation pass
+2019-09-24 11:18:45,722 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_5  : 111.198.154.116:8888 validation fail
+2019-09-24 11:18:46,267 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 175.25.26.117:3128   validation pass
+2019-09-24 11:18:47,135 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_2  : 124.237.83.14:53281  validation fail
+2019-09-24 11:18:47,776 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 58.249.55.222:9797   validation pass
+2019-09-24 11:18:47,829 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_6  : 125.123.121.251:9999 validation fail
+2019-09-24 11:18:48,269 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 39.106.223.134:80    validation pass
+2019-09-24 11:18:48,429 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 60.217.73.238:8060   validation pass
+2019-09-24 11:18:48,647 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 111.29.3.194:8080    validation pass
+2019-09-24 11:18:48,826 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 27.203.215.138:8060  validation pass
+2019-09-24 11:18:48,838 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_2  : 101.254.136.130:8080 validation pass
+2019-09-24 11:18:50,136 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 61.128.208.94:3128   validation pass
+2019-09-24 11:18:50,682 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_6  : 182.253.62.173:3129  validation fail
+2019-09-24 11:18:50,876 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 118.24.175.158:8080  validation pass
+2019-09-24 11:18:50,942 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_7  : 182.34.34.100:9999   validation fail
+2019-09-24 11:18:50,946 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_2  : 202.162.34.115:53281 validation pass
+2019-09-24 11:18:50,951 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_3  : 110.86.138.183:9999  validation fail
+2019-09-24 11:18:51,110 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 123.139.56.238:9999  validation pass
+2019-09-24 11:18:51,131 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 125.123.121.92:9999  validation pass
+2019-09-24 11:18:51,181 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 222.175.171.6:8080   validation pass
+2019-09-24 11:18:51,275 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 91.241.21.150:8080   validation pass
+2019-09-24 11:18:51,296 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 39.108.90.252:8000   validation pass
+2019-09-24 11:18:51,866 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_4  : 124.205.155.151:9090 validation fail
+2019-09-24 11:18:51,958 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_4  : 180.160.74.35:8118   validation fail
+2019-09-24 11:18:52,474 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 119.123.179.200:9000 validation pass
+2019-09-24 11:18:53,214 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_8  : 124.207.82.166:8008  validation fail
+2019-09-24 11:18:53,756 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 140.255.143.173:9999 validation pass
+2019-09-24 11:18:53,833 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 49.76.85.124:8060    validation pass
+2019-09-24 11:18:54,109 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_3  : 60.12.89.218:33920   validation pass
+2019-09-24 11:18:54,721 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 210.26.64.44:3128    validation pass
+2019-09-24 11:18:54,748 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 115.29.3.37:80       validation pass
+2019-09-24 11:18:54,918 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 96.9.73.80:45908     validation pass
+2019-09-24 11:18:55,286 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 180.175.90.243:8060  validation pass
+2019-09-24 11:18:55,505 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 218.14.54.16:61234   validation pass
+2019-09-24 11:18:55,678 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 222.74.202.226:8080  validation pass
+2019-09-24 11:18:55,735 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_5  : 123.207.111.68:38331 validation fail
+2019-09-24 11:18:55,829 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 218.60.8.83:3129     validation pass
+2019-09-24 11:18:55,974 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 111.29.3.221:8080    validation pass
+2019-09-24 11:18:55,988 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_2  : 183.23.75.204:61234  validation pass
+2019-09-24 11:18:55,997 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 221.178.232.130:8080 validation pass
+2019-09-24 11:18:56,136 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 39.137.69.9:8080     validation pass
+2019-09-24 11:18:58,014 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 221.226.94.218:110   validation pass
+2019-09-24 11:18:58,530 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 119.57.108.65:53281  validation pass
+2019-09-24 11:18:58,619 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_1  : 222.188.17.40:61234  validation fail
+2019-09-24 11:18:58,709 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 115.233.210.218:808  validation pass
+2019-09-24 11:18:59,383 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 218.241.219.226:9999 validation pass
+2019-09-24 11:19:00,164 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 14.20.235.24:34100   validation pass
+2019-09-24 11:19:00,339 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_2  : 58.247.127.145:53281 validation pass
+2019-09-24 11:19:00,444 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_2  : 221.1.205.74:8060    validation fail
+2019-09-24 11:19:01,185 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 59.37.18.243:3128    validation pass
+2019-09-24 11:19:01,273 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 212.83.164.85:80     validation pass
+2019-09-24 11:19:01,474 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 111.29.3.193:8080    validation pass
+2019-09-24 11:19:01,711 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 119.39.68.23:808     validation pass
+2019-09-24 11:19:01,971 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_4  : 150.242.182.98:80    validation fail
+2019-09-24 11:19:02,344 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_4  : 190.242.119.194:8085 validation fail
+2019-09-24 11:19:02,380 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_3  : 120.237.14.198:53281 validation pass
+2019-09-24 11:19:02,493 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_7  : 124.205.155.152:9090 validation fail
+2019-09-24 11:19:02,552 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_4  : 27.29.158.21:61234   validation pass
+2019-09-24 11:19:02,553 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_4  : exit
+2019-09-24 11:19:03,154 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 101.231.234.38:8080  validation pass
+2019-09-24 11:19:03,156 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_7  : exit
+2019-09-24 11:19:03,354 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_3  : 139.196.22.147:80    validation pass
+2019-09-24 11:19:03,354 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_3  : exit
+2019-09-24 11:19:03,382 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_2  : 119.122.215.2:9000   validation pass
+2019-09-24 11:19:03,383 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_2  : exit
+2019-09-24 11:19:04,764 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_9  : 110.86.138.111:9999  validation fail
+2019-09-24 11:19:04,765 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_9  : exit
+2019-09-24 11:19:08,030 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_8  : 188.35.167.7:45619   validation fail
+2019-09-24 11:19:08,031 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_8  : exit
+2019-09-24 11:19:08,411 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 175.18.14.105:8080   validation pass
+2019-09-24 11:19:08,412 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_1  : exit
+2019-09-24 11:19:09,401 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_0  : 43.254.168.56:53281  validation fail
+2019-09-24 11:19:09,402 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_0  : exit
+2019-09-24 11:19:11,486 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_5  : 124.205.143.213:61491 validation fail
+2019-09-24 11:19:11,487 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_5  : exit
+2019-09-24 11:19:11,729 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_6  : 117.141.155.242:53281 validation fail
+2019-09-24 11:19:11,730 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_6  : exit
+2019-09-24 11:20:11,956 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_0  : start
+2019-09-24 11:20:11,961 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_1  : start
+2019-09-24 11:20:11,971 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_2  : start
+2019-09-24 11:20:11,975 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_3  : start
+2019-09-24 11:20:11,982 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_4  : start
+2019-09-24 11:20:11,987 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_5  : start
+2019-09-24 11:20:11,991 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_6  : start
+2019-09-24 11:20:12,048 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_7  : start
+2019-09-24 11:20:12,051 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_8  : start
+2019-09-24 11:20:12,061 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_9  : start
+2019-09-24 11:20:12,152 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 111.29.3.189:8080    validation pass
+2019-09-24 11:20:12,262 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 111.29.3.221:8080    validation pass
+2019-09-24 11:20:12,395 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 218.95.37.227:3128   validation pass
+2019-09-24 11:20:12,557 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 119.179.150.143:8060 validation pass
+2019-09-24 11:20:12,800 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 111.29.3.192:8080    validation pass
+2019-09-24 11:20:12,911 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 221.178.232.130:8080 validation pass
+2019-09-24 11:20:13,443 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 27.191.234.69:9999   validation pass
+2019-09-24 11:20:14,037 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 222.184.7.206:43327  validation pass
+2019-09-24 11:20:14,222 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 123.139.56.238:9999  validation pass
+2019-09-24 11:20:14,255 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 119.57.108.65:53281  validation pass
+2019-09-24 11:20:14,345 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 39.137.69.9:8080     validation pass
+2019-09-24 11:20:14,487 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 121.15.254.156:888   validation pass
+2019-09-24 11:20:14,810 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 117.191.11.107:8080  validation pass
+2019-09-24 11:20:15,078 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 183.23.75.204:61234  validation pass
+2019-09-24 11:20:16,216 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 218.241.219.226:9999 validation pass
+2019-09-24 11:20:17,106 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_3  : 211.101.154.105:43598 validation pass
+2019-09-24 11:20:17,579 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_9  : 119.27.177.238:8080  validation fail
+2019-09-24 11:20:17,755 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 124.205.155.158:9090 validation pass
+2019-09-24 11:20:18,080 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_4  : 202.162.34.115:53281 validation fail
+2019-09-24 11:20:18,360 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 58.247.127.145:53281 validation pass
+2019-09-24 11:20:18,453 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 47.110.130.152:8080  validation pass
+2019-09-24 11:20:18,564 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 222.175.171.6:8080   validation pass
+2019-09-24 11:20:19,227 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_4  : 125.123.121.92:9999  validation pass
+2019-09-24 11:20:19,374 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 113.140.1.82:53281   validation pass
+2019-09-24 11:20:19,830 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 39.106.223.134:80    validation pass
+2019-09-24 11:20:19,838 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_4  : 119.39.68.23:808     validation pass
+2019-09-24 11:20:20,052 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 91.241.21.150:8080   validation pass
+2019-09-24 11:20:21,384 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 39.108.90.252:8000   validation pass
+2019-09-24 11:20:21,497 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 210.26.49.88:3128    validation pass
+2019-09-24 11:20:21,728 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 115.233.210.218:808  validation pass
+2019-09-24 11:20:21,951 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 111.29.3.190:80      validation pass
+2019-09-24 11:20:22,034 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_9  : 27.29.158.21:61234   validation fail
+2019-09-24 11:20:22,073 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_8  : 120.198.76.45:41443  validation fail
+2019-09-24 11:20:24,224 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 58.249.55.222:9797   validation pass
+2019-09-24 11:20:24,391 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 27.203.215.138:8060  validation pass
+2019-09-24 11:20:24,714 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 220.143.171.188:3128 validation pass
+2019-09-24 11:20:24,885 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 60.217.73.238:8060   validation pass
+2019-09-24 11:20:25,034 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 39.137.69.10:8080    validation pass
+2019-09-24 11:20:25,058 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 39.105.149.68:8888   validation pass
+2019-09-24 11:20:25,129 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_4  : 115.29.3.37:80       validation pass
+2019-09-24 11:20:26,140 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 140.255.143.173:9999 validation pass
+2019-09-24 11:20:26,189 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 96.9.73.80:45908     validation pass
+2019-09-24 11:20:26,333 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 111.29.3.185:8080    validation pass
+2019-09-24 11:20:26,411 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 175.102.3.98:8089    validation pass
+2019-09-24 11:20:26,590 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 111.29.3.220:8080    validation pass
+2019-09-24 11:20:26,595 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 61.128.208.94:3128   validation pass
+2019-09-24 11:20:27,104 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 210.26.64.44:3128    validation pass
+2019-09-24 11:20:27,123 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_3  : 175.25.26.117:3128   validation fail
+2019-09-24 11:20:27,767 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_5  : 60.12.89.218:33920   validation fail
+2019-09-24 11:20:27,958 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 175.18.14.105:8080   validation pass
+2019-09-24 11:20:28,253 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 47.110.59.21:8080    validation pass
+2019-09-24 11:20:28,452 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 39.135.24.11:8080    validation pass
+2019-09-24 11:20:28,489 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 120.237.14.198:53281 validation pass
+2019-09-24 11:20:28,563 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_3  : 119.122.215.2:9000   validation pass
+2019-09-24 11:20:28,679 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 111.29.3.193:8080    validation pass
+2019-09-24 11:20:28,855 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 101.254.136.130:8080 validation pass
+2019-09-24 11:20:29,049 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_2  : 61.178.149.237:59042 validation fail
+2019-09-24 11:20:29,294 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 59.37.18.243:3128    validation pass
+2019-09-24 11:20:29,524 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 218.14.54.16:61234   validation pass
+2019-09-24 11:20:29,546 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_5  : 221.226.94.218:110   validation fail
+2019-09-24 11:20:29,998 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_7  : 118.24.175.158:8080  validation fail
+2019-09-24 11:20:30,061 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_6  : 58.56.149.198:53281  validation fail
+2019-09-24 11:20:30,096 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_7  : 115.219.75.204:61234 validation fail
+2019-09-24 11:20:30,160 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 222.74.202.226:8080  validation pass
+2019-09-24 11:20:30,285 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 139.196.22.147:80    validation pass
+2019-09-24 11:20:30,389 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 111.29.3.194:8080    validation pass
+2019-09-24 11:20:30,390 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_6  : exit
+2019-09-24 11:20:30,420 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 218.60.8.83:3129     validation pass
+2019-09-24 11:20:30,420 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_5  : exit
+2019-09-24 11:20:31,004 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 119.123.179.200:9000 validation pass
+2019-09-24 11:20:31,005 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_8  : exit
+2019-09-24 11:20:31,943 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 180.175.90.243:8060  validation pass
+2019-09-24 11:20:31,943 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_0  : exit
+2019-09-24 11:20:34,883 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 14.20.235.24:34100   validation pass
+2019-09-24 11:20:34,884 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_1  : exit
+2019-09-24 11:20:35,149 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_4  : 49.76.85.124:8060    validation fail
+2019-09-24 11:20:35,150 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_4  : exit
+2019-09-24 11:20:36,351 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_9  : 123.117.39.111:9000  validation fail
+2019-09-24 11:20:36,352 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_9  : exit
+2019-09-24 11:20:38,578 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_3  : 222.240.184.126:8086 validation fail
+2019-09-24 11:20:38,579 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_3  : exit
+2019-09-24 11:20:39,061 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_2  : 212.83.164.85:80     validation fail
+2019-09-24 11:20:39,062 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_2  : exit
+2019-09-24 11:20:40,114 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_7  : 101.231.234.38:8080  validation fail
+2019-09-24 11:20:40,115 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_7  : exit
+2019-09-24 11:21:11,987 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_0  : start
+2019-09-24 11:21:11,993 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_1  : start
+2019-09-24 11:21:12,005 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_2  : start
+2019-09-24 11:21:12,014 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_3  : start
+2019-09-24 11:21:12,062 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_5  : start
+2019-09-24 11:21:12,016 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_4  : start
+2019-09-24 11:21:12,068 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_7  : start
+2019-09-24 11:21:12,071 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_8  : start
+2019-09-24 11:21:12,066 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_6  : start
+2019-09-24 11:21:12,084 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_9  : start
+2019-09-24 11:21:12,199 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 111.29.3.189:8080    validation pass
+2019-09-24 11:21:12,261 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 218.95.37.227:3128   validation pass
+2019-09-24 11:21:12,261 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 119.179.150.143:8060 validation pass
+2019-09-24 11:21:12,279 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_4  : 111.29.3.221:8080    validation pass
+2019-09-24 11:21:12,306 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 221.178.232.130:8080 validation pass
+2019-09-24 11:21:12,307 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 111.29.3.192:8080    validation pass
+2019-09-24 11:21:12,328 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 113.140.1.82:53281   validation pass
+2019-09-24 11:21:12,397 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_3  : 27.191.234.69:9999   validation pass
+2019-09-24 11:21:12,402 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 47.110.59.21:8080    validation pass
+2019-09-24 11:21:12,453 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 39.137.69.9:8080     validation pass
+2019-09-24 11:21:12,472 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 121.15.254.156:888   validation pass
+2019-09-24 11:21:12,589 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 183.23.75.204:61234  validation pass
+2019-09-24 11:21:12,721 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_3  : 117.191.11.107:8080  validation pass
+2019-09-24 11:21:12,782 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_3  : 125.123.121.92:9999  validation fail
+2019-09-24 11:21:12,873 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_3  : 47.110.130.152:8080  validation pass
+2019-09-24 11:21:12,897 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 218.241.219.226:9999 validation pass
+2019-09-24 11:21:13,078 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_3  : 222.175.171.6:8080   validation pass
+2019-09-24 11:21:13,081 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 222.184.7.206:43327  validation pass
+2019-09-24 11:21:13,248 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 58.247.127.145:53281 validation pass
+2019-09-24 11:21:15,265 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_3  : 119.39.68.23:808     validation pass
+2019-09-24 11:21:15,369 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_3  : 210.26.49.88:3128    validation pass
+2019-09-24 11:21:16,935 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_9  : 39.108.90.252:8000   validation fail
+2019-09-24 11:21:17,153 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 111.29.3.190:80      validation pass
+2019-09-24 11:21:17,579 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 39.106.223.134:80    validation pass
+2019-09-24 11:21:17,777 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 115.233.210.218:808  validation pass
+2019-09-24 11:21:18,337 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_2  : 211.101.154.105:43598 validation pass
+2019-09-24 11:21:18,499 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_2  : 27.203.215.138:8060  validation pass
+2019-09-24 11:21:18,525 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 58.249.55.222:9797   validation pass
+2019-09-24 11:21:18,661 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 39.137.69.10:8080    validation pass
+2019-09-24 11:21:18,740 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 140.255.143.173:9999 validation pass
+2019-09-24 11:21:19,154 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 111.29.3.185:8080    validation pass
+2019-09-24 11:21:19,351 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 111.29.3.220:8080    validation pass
+2019-09-24 11:21:19,394 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_9  : 59.37.18.243:3128    validation fail
+2019-09-24 11:21:19,852 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 210.26.64.44:3128    validation pass
+2019-09-24 11:21:21,820 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 120.237.14.198:53281 validation pass
+2019-09-24 11:21:22,075 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_5  : 119.57.108.65:53281  validation fail
+2019-09-24 11:21:22,286 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 175.18.14.105:8080   validation pass
+2019-09-24 11:21:22,296 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_4  : 123.139.56.238:9999  validation fail
+2019-09-24 11:21:22,283 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_6  : 124.205.155.158:9090 validation fail
+2019-09-24 11:21:22,324 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_1  : 91.241.21.150:8080   validation fail
+2019-09-24 11:21:22,491 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 39.135.24.11:8080    validation pass
+2019-09-24 11:21:22,512 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 61.128.208.94:3128   validation pass
+2019-09-24 11:21:22,510 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_4  : 111.29.3.193:8080    validation pass
+2019-09-24 11:21:22,776 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 218.14.54.16:61234   validation pass
+2019-09-24 11:21:22,891 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 115.29.3.37:80       validation pass
+2019-09-24 11:21:22,929 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 101.254.136.130:8080 validation pass
+2019-09-24 11:21:23,002 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 222.74.202.226:8080  validation pass
+2019-09-24 11:21:23,031 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 39.105.149.68:8888   validation pass
+2019-09-24 11:21:23,050 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 60.217.73.238:8060   validation pass
+2019-09-24 11:21:23,101 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_0  : 175.102.3.98:8089    validation fail
+2019-09-24 11:21:23,103 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_0  : exit
+2019-09-24 11:21:23,165 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_7  : 218.60.8.83:3129     validation fail
+2019-09-24 11:21:23,166 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_7  : exit
+2019-09-24 11:21:23,257 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 111.29.3.194:8080    validation pass
+2019-09-24 11:21:23,258 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_1  : exit
+2019-09-24 11:21:23,521 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 139.196.22.147:80    validation pass
+2019-09-24 11:21:23,521 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_6  : exit
+2019-09-24 11:21:25,380 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_3  : 96.9.73.80:45908     validation fail
+2019-09-24 11:21:25,381 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_3  : exit
+2019-09-24 11:21:25,920 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_2  : 220.143.171.188:3128 validation pass
+2019-09-24 11:21:25,920 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_2  : exit
+2019-09-24 11:21:27,686 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 119.122.215.2:9000   validation pass
+2019-09-24 11:21:27,687 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_9  : exit
+2019-09-24 11:21:27,791 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_8  : 119.123.179.200:9000 validation fail
+2019-09-24 11:21:27,792 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_8  : exit
+2019-09-24 11:21:32,501 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_5  : 180.175.90.243:8060  validation fail
+2019-09-24 11:21:32,502 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_5  : exit
+2019-09-24 11:21:32,534 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_4  : 14.20.235.24:34100   validation fail
+2019-09-24 11:21:32,535 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_4  : exit
+2019-09-24 11:22:11,987 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_1  : start
+2019-09-24 11:22:11,986 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_0  : start
+2019-09-24 11:22:12,006 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_3  : start
+2019-09-24 11:22:12,015 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_4  : start
+2019-09-24 11:22:12,019 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_5  : start
+2019-09-24 11:22:12,004 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_2  : start
+2019-09-24 11:22:12,102 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_6  : start
+2019-09-24 11:22:12,116 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_7  : start
+2019-09-24 11:22:12,118 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_8  : start
+2019-09-24 11:22:12,123 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_9  : start
+2019-09-24 11:22:12,158 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_6  : 218.95.37.227:3128   validation fail
+2019-09-24 11:22:12,236 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 221.178.232.130:8080 validation pass
+2019-09-24 11:22:12,294 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 119.179.150.143:8060 validation pass
+2019-09-24 11:22:12,316 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 27.203.215.138:8060  validation pass
+2019-09-24 11:22:12,327 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 111.29.3.221:8080    validation pass
+2019-09-24 11:22:12,345 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 111.29.3.192:8080    validation pass
+2019-09-24 11:22:12,384 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 47.110.59.21:8080    validation pass
+2019-09-24 11:22:12,425 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 111.29.3.189:8080    validation pass
+2019-09-24 11:22:12,436 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 39.137.69.9:8080     validation pass
+2019-09-24 11:22:12,486 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_8  : 115.233.210.218:808  validation fail
+2019-09-24 11:22:12,535 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 183.23.75.204:61234  validation pass
+2019-09-24 11:22:12,613 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 222.175.171.6:8080   validation pass
+2019-09-24 11:22:12,668 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 117.191.11.107:8080  validation pass
+2019-09-24 11:22:12,818 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 47.110.130.152:8080  validation pass
+2019-09-24 11:22:12,918 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 210.26.49.88:3128    validation pass
+2019-09-24 11:22:13,129 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 111.29.3.190:80      validation pass
+2019-09-24 11:22:13,426 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_2  : 113.140.1.82:53281   validation pass
+2019-09-24 11:22:13,631 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 218.241.219.226:9999 validation pass
+2019-09-24 11:22:13,753 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 39.137.69.10:8080    validation pass
+2019-09-24 11:22:13,787 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_2  : 220.143.171.188:3128 validation pass
+2019-09-24 11:22:13,823 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 140.255.143.173:9999 validation pass
+2019-09-24 11:22:13,981 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_2  : 111.29.3.185:8080    validation pass
+2019-09-24 11:22:14,232 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 111.29.3.220:8080    validation pass
+2019-09-24 11:22:14,419 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_2  : 210.26.64.44:3128    validation pass
+2019-09-24 11:22:16,145 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_2  : 119.122.215.2:9000   validation fail
+2019-09-24 11:22:16,454 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 119.39.68.23:808     validation pass
+2019-09-24 11:22:16,736 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 39.135.24.11:8080    validation pass
+2019-09-24 11:22:16,942 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 61.128.208.94:3128   validation pass
+2019-09-24 11:22:17,136 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 111.29.3.193:8080    validation pass
+2019-09-24 11:22:19,089 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 115.29.3.37:80       validation pass
+2019-09-24 11:22:19,244 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_4  : 27.191.234.69:9999   validation pass
+2019-09-24 11:22:19,336 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 218.14.54.16:61234   validation pass
+2019-09-24 11:22:19,742 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_4  : 39.106.223.134:80    validation pass
+2019-09-24 11:22:19,908 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_4  : 60.217.73.238:8060   validation pass
+2019-09-24 11:22:19,964 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_4  : 222.74.202.226:8080  validation pass
+2019-09-24 11:22:19,986 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_4  : 39.105.149.68:8888   validation pass
+2019-09-24 11:22:20,190 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_4  : 111.29.3.194:8080    validation pass
+2019-09-24 11:22:20,190 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_4  : exit
+2019-09-24 11:22:21,079 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 139.196.22.147:80    validation pass
+2019-09-24 11:22:21,079 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_5  : exit
+2019-09-24 11:22:21,701 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 58.249.55.222:9797   validation pass
+2019-09-24 11:22:21,701 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_8  : exit
+2019-09-24 11:22:21,818 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 222.184.7.206:43327  validation pass
+2019-09-24 11:22:21,819 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_1  : exit
+2019-09-24 11:22:22,124 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_3  : 211.101.154.105:43598 validation fail
+2019-09-24 11:22:22,125 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_3  : exit
+2019-09-24 11:22:22,333 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_6  : 121.15.254.156:888   validation fail
+2019-09-24 11:22:22,337 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_6  : exit
+2019-09-24 11:22:22,442 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_0  : 58.247.127.145:53281 validation fail
+2019-09-24 11:22:22,445 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_0  : exit
+2019-09-24 11:22:23,540 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_2  : 175.18.14.105:8080   validation pass
+2019-09-24 11:22:23,541 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_2  : exit
+2019-09-24 11:22:24,250 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_9  : 120.237.14.198:53281 validation fail
+2019-09-24 11:22:24,252 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_9  : exit
+2019-09-24 11:22:27,152 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_7  : 101.254.136.130:8080 validation fail
+2019-09-24 11:22:27,156 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_7  : exit
+2019-09-24 11:23:11,956 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_0  : start
+2019-09-24 11:23:11,964 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_1  : start
+2019-09-24 11:23:11,980 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_2  : start
+2019-09-24 11:23:11,986 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_4  : start
+2019-09-24 11:23:11,985 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_3  : start
+2019-09-24 11:23:12,004 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_5  : start
+2019-09-24 11:23:12,011 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_6  : start
+2019-09-24 11:23:12,066 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_8  : start
+2019-09-24 11:23:12,065 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_7  : start
+2019-09-24 11:23:12,074 UsefulProxyCheck.py[line:38] INFO UsefulProxyCheck - thread_9  : start
+2019-09-24 11:23:12,222 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 119.179.150.143:8060 validation pass
+2019-09-24 11:23:12,222 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_4  : 111.29.3.221:8080    validation pass
+2019-09-24 11:23:12,245 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 27.203.215.138:8060  validation pass
+2019-09-24 11:23:12,288 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 221.178.232.130:8080 validation pass
+2019-09-24 11:23:12,289 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 111.29.3.192:8080    validation pass
+2019-09-24 11:23:12,368 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 39.137.69.9:8080     validation pass
+2019-09-24 11:23:12,384 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 111.29.3.189:8080    validation pass
+2019-09-24 11:23:12,419 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 183.23.75.204:61234  validation pass
+2019-09-24 11:23:12,518 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 210.26.49.88:3128    validation pass
+2019-09-24 11:23:12,580 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_4  : 117.191.11.107:8080  validation pass
+2019-09-24 11:23:12,686 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 47.110.59.21:8080    validation pass
+2019-09-24 11:23:12,739 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 111.29.3.190:80      validation pass
+2019-09-24 11:23:12,783 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 218.241.219.226:9999 validation pass
+2019-09-24 11:23:12,850 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 222.175.171.6:8080   validation pass
+2019-09-24 11:23:12,870 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 140.255.143.173:9999 validation pass
+2019-09-24 11:23:12,892 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_7  : 39.137.69.10:8080    validation pass
+2019-09-24 11:23:13,047 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_6  : 111.29.3.185:8080    validation pass
+2019-09-24 11:23:13,071 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 111.29.3.220:8080    validation pass
+2019-09-24 11:23:13,265 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 39.135.24.11:8080    validation pass
+2019-09-24 11:23:13,375 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 119.39.68.23:808     validation pass
+2019-09-24 11:23:13,428 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 61.128.208.94:3128   validation pass
+2019-09-24 11:23:13,524 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 47.110.130.152:8080  validation pass
+2019-09-24 11:23:13,813 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 111.29.3.193:8080    validation pass
+2019-09-24 11:23:13,819 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 218.14.54.16:61234   validation pass
+2019-09-24 11:23:13,830 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 222.184.7.206:43327  validation pass
+2019-09-24 11:23:14,004 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 60.217.73.238:8060   validation pass
+2019-09-24 11:23:14,072 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 222.74.202.226:8080  validation pass
+2019-09-24 11:23:14,096 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 39.105.149.68:8888   validation pass
+2019-09-24 11:23:14,261 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_9  : 220.143.171.188:3128 validation pass
+2019-09-24 11:23:14,261 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_9  : exit
+2019-09-24 11:23:14,272 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_5  : 39.106.223.134:80    validation pass
+2019-09-24 11:23:14,273 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_5  : exit
+2019-09-24 11:23:14,316 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_0  : 111.29.3.194:8080    validation pass
+2019-09-24 11:23:14,316 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_0  : exit
+2019-09-24 11:23:14,605 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_8  : 139.196.22.147:80    validation pass
+2019-09-24 11:23:14,607 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_8  : exit
+2019-09-24 11:23:21,994 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_2  : 27.191.234.69:9999   validation fail
+2019-09-24 11:23:22,000 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_2  : exit
+2019-09-24 11:23:22,013 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_3  : 113.140.1.82:53281   validation fail
+2019-09-24 11:23:22,017 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_3  : exit
+2019-09-24 11:23:22,591 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_4  : 58.249.55.222:9797   validation fail
+2019-09-24 11:23:22,595 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_4  : exit
+2019-09-24 11:23:22,903 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_7  : 210.26.64.44:3128    validation fail
+2019-09-24 11:23:22,904 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_7  : exit
+2019-09-24 11:23:23,069 UsefulProxyCheck.py[line:55] INFO UsefulProxyCheck - thread_6  : 175.18.14.105:8080   validation fail
+2019-09-24 11:23:23,071 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_6  : exit
+2019-09-24 11:23:27,150 UsefulProxyCheck.py[line:52] INFO UsefulProxyCheck - thread_1  : 115.29.3.37:80       validation pass
+2019-09-24 11:23:27,150 UsefulProxyCheck.py[line:44] INFO UsefulProxyCheck - thread_1  : exit

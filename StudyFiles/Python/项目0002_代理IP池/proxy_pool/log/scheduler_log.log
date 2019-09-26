@@ -1,0 +1,15 @@
+2019-09-24 11:19:11,923 base.py[line:428] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2019-09-24 11:19:11,924 base.py[line:428] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2019-09-24 11:19:11,924 base.py[line:861] INFO Added job "raw_proxy定时采集" to job store "default"
+2019-09-24 11:19:11,925 base.py[line:861] INFO Added job "useful_proxy定时检查" to job store "default"
+2019-09-24 11:19:11,925 base.py[line:155] INFO Scheduler started
+2019-09-24 11:19:11,925 base.py[line:917] DEBUG Looking for jobs to run
+2019-09-24 11:19:11,926 base.py[line:985] DEBUG Next wakeup is due at 2019-09-24 11:20:11.923789+08:00 (in 59.997760 seconds)
+2019-09-24 11:20:11,924 base.py[line:917] DEBUG Looking for jobs to run
+2019-09-24 11:20:11,930 base.py[line:985] DEBUG Next wakeup is due at 2019-09-24 11:21:11.923789+08:00 (in 59.998075 seconds)
+2019-09-24 11:21:11,940 base.py[line:917] DEBUG Looking for jobs to run
+2019-09-24 11:21:11,965 base.py[line:985] DEBUG Next wakeup is due at 2019-09-24 11:22:11.923789+08:00 (in 59.982024 seconds)
+2019-09-24 11:22:11,951 base.py[line:917] DEBUG Looking for jobs to run
+2019-09-24 11:22:11,954 base.py[line:985] DEBUG Next wakeup is due at 2019-09-24 11:23:11.923789+08:00 (in 59.971197 seconds)
+2019-09-24 11:23:11,931 base.py[line:917] DEBUG Looking for jobs to run
+2019-09-24 11:23:11,934 base.py[line:985] DEBUG Next wakeup is due at 2019-09-24 11:24:11.922452+08:00 (in 59.989978 seconds)

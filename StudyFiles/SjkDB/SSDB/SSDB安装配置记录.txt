@@ -1,0 +1,131 @@
+SSDB安装配置记录
+参考地址：https://github.com/jhao104/memory-notes/blob/master/SSDB/SSDB%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95.md
+
+1.下载
+wget --no-check-certificate https://github.com/ideawu/ssdb/archive/master.zip
+
+2.解压
+unzip master.zip -d /usr/local/onesFile/
+
+3.进入目录执行
+cd /usr/local/onesFile/ssdb-master
+make
+
+但是编译报错：
+
+ERROR! autoconf required! install autoconf first
+Makefile:4: build_config.mk: No such file or directory
+make: *** No rule to make target `build_config.mk'.  Stop.
+
+原来是没有autoconf不能实现自动编译，于是安装autoconf:
+
+yum install -y autoconf
+
+继续执行，又报错：
+builder.cc -o out-static/db/builder.o
+make[1]: g++：命令未找到
+make[1]: *** [out-static/db/builder.o] 错误 127
+make[1]: 离开目录“/usr/local/onesFile/ssdb-master/deps/leveldb-1.20”
+make: *** [all] 错误 2
+
+查询： 
+[root@localhost ~]# which gcc
+/usr/bin/gcc
+[root@localhost ~]# which g++
+/usr/bin/which: no g++ in (/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin)
+
+[root@localhost ~]# which build-essential
+/usr/bin/which: no build-essential in (/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin)
+
+补上：
+
+- 若要安装gcc，则在命令行中入:yum -y install gcc，按回车键就能够进行gcc的安装，
+- 若要安装g++，则需要在命令行中输入：yum -y install gcc-c++，就能够进行g++的安装。
+yum -y install build-essential
+
+报错：
+g++: 错误：/usr/local/onesFile/ssdb-master/deps/snappy-1.1.0/.libs/libsnappy.a：没有那个文件或目录
+make[1]: *** [all] 错误 1
+make[1]: 离开目录“/usr/local/onesFile/ssdb-master/src”
+make: *** [all] 错误 2
+
+解决：
+参考地址：https://www.jianshu.com/p/9cca445117fa
+这是因为 Snappy 或者 Jemalloc 没有编译成功, 这一般是因为你的系统时钟有问题. 可以这样解决:
+
+yum install automake 
+yum install libtool
+
+cd /usr/local/onesFile/ssdb-master/deps/snappy-1.1.0/
+autoreconf --force --install
+./configure
+make
+
+然后继续make编译，顺利完成
+
+安装位置：
+make install PREFIX=/usr/local/onesFile/ssdb
+
+
+4、启动
+默认配置是安装在 /usr/local/ssdb,
+进入安装目录下:
+cd /usr/local/onesFile/ssdb/
+
+# 启动主库, 此命令会阻塞住命令行
+./ssdb-server ssdb.conf
+
+# 或者启动为后台进程(不阻塞命令行)
+./ssdb-server -d ssdb.conf
+
+5、停止
+./ssdb-server ssdb.conf -s stop
+
+6、重启
+./ssdb-server ssdb.conf -s restart
+
+7、登陆测试
+[huangyaochun@localhost ~]$ /usr/local/onesFile/ssdb/ssdb-cli 127.0.0.1 -p8888
+
+
+ssdb (cli) - ssdb command line tool.
+Copyright (c) 2012-2016 ssdb.io
+
+'h' or 'help' for help, 'q' to quit.
+
+ssdb-server 1.9.7
+
+ssdb 127.0.0.1:8888> info
+version
+        1.9.7
+links
+        1
+total_calls
+        1222
+dbsize
+        0
+binlogs
+            capacity : 20000000
+            min_seq  : 0
+            max_seq  : 1377
+serv_key_range
+            kv  : "" - ""
+            hash: "" - ""
+            zset: "" - ""
+            list: "" - ""
+data_key_range
+            kv  : "" - ""
+            hash: "" - ""
+            zset: "" - ""
+            list: "" - ""
+leveldb.stats
+                                       Compactions
+        Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+        --------------------------------------------------
+          1        0        0         0        0         0
+          2        0        0         0        0         0
+
+17 result(s) (0.001 sec)
+(0.001 sec)
+ssdb 127.0.0.1:8888> 
+

@@ -1,0 +1,51 @@
+*****
+参考：https://www.jianshu.com/p/0c0759bc3d27
+
+使用pip安装Scrapy
+C:\Users\52702>pip install pypiwin32
+C:\Users\52702>pip install Scrapy
+
+创建蜘蛛项目： 
+C:\Users\52702\Desktop>scrapy startproject baidu
+New Scrapy project 'baidu', using template directory 'd:\python27\lib\site-packages\scrapy\templates\project', created in:
+    C:\Users\52702\Desktop\baidu
+
+You can start your first spider with:
+    cd baidu
+    scrapy genspider example example.com
+
+创建蜘蛛：scrapy genspider movie movie.douban.com
+
+运行蜘蛛：scrapy crawl movie --nolog
+
+***
+文件的功能：
+
+scrapy.cfg：配置文件
+
+spiders：存放你Spider文件，也就是你爬取的py文件
+
+items.py：相当于一个容器，和字典较像
+
+middlewares.py：定义Downloader Middlewares(下载器中间件)和Spider Middlewares(蜘蛛中间件)的实现
+
+pipelines.py:定义Item Pipeline的实现，实现数据的清洗，储存，验证。
+
+settings.py：全局配置
+***
+
+**第二个 爬虫项目 
+参考：https://www.jianshu.com/p/6bc5a4641629
+创建一个scrapy项目： scrapy startproject tutorial
+创建一个spider： scrapy genspider maoyan maoyan.com/board/7
+... 自定义
+运行spider： scrapy crawl maoyan(项目的名字)
+运行入文件：
+scrapy crawl maoyan -o maoyan.csv
+
+scrapy crawl maoyan -o maoyan.xml
+
+scrapy crawl maoyan -o maoyan.json -s FEED_EXPORT_ENCODING=UTF8
+
+注意点：
+关于随机ua配置问题，https://blog.51cto.com/laoyinga/2046970
