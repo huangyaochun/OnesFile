@@ -1,0 +1,8 @@
+一、Elasticsearch文件目录解释
+下载后解压的Elasticsearch中，有以下几个基本的目录：
+home---这是Elasticsearch解压的目录
+bin---这里面是ES启动的脚本
+conf---elasticsearch.yml为ES的配置文件
+data---这里是ES得当前节点的分片的数据，可以直接拷贝到其他的节点进行使用
+logs---日志文件
+plugins---这里存放一些常用的插件，如果有一切额外的插件，可以放在这里使用。

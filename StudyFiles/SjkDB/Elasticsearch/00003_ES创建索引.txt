@@ -1,0 +1,77 @@
+Elasticsearch(ES) 创建索引
+一、通过head插件创建索引  索引 -- 新建索引
+http://172.16.70.125:9200/test001
+{
+  "test001": {
+    "mappings": {},
+    "settings": {
+      "index": {
+        "creation_date": "1574144635638",
+        "number_of_shards": "5",
+        "number_of_replicas": "1",
+        "version": {
+          "created": "1040199"
+        },
+        "uuid": "LLWtLPW0RDija0GaJO2Alg"
+      }
+    }
+  }
+}
+
+二、通过Elasticsearch 的 RESTFul API 来创建索引：
+参考地址：https://www.cnblogs.com/quanxiaoha/p/11532487.html
+
+PUT  http://127.0.0.1:9200/test001
+注意：默认情况下，创建的索引分片数量是 5 个，副本数量是 1 个。
+
+
+1.通过 CURL 命令来上手操作一下， 创建一个商品索引, 看下效果：
+curl -X PUT "172.16.70.125:9200/commodity?pretty"
+[root@localhost elasticsearch-1.4.1]# curl -X PUT "172.16.70.125:9200/commodity?pretty"
+{
+  "acknowledged" : true
+}
+
+2.创建带有类型、映射的索引（Index）
+curl -H 'Content-Type:application/json' -X PUT http://172.16.70.125:9200/commodity?pretty -d '{
+    "settings": {
+        "number_of_shards": 3,
+        "number_of_replicas": 2
+    },
+    "mapping": {
+        "_doc": {
+            "properties": {
+                "commodity_id": {
+                    "type": "long"
+                },
+                "commodity_name": {
+                    "type": "text"
+                },
+                "picture_url": {
+                    "type": "keyword"
+                },
+                "price": {
+                    "type": "double"
+                }
+            }
+        }
+    }
+}'
+
+返回结果：
+{
+  "acknowledged" : true
+}
+
+说明：
+创建了一个分片数(number_of_shards)为 3，副本数(number_of_replicas)为 2 的索引，
+同时，定义了一个 _doc 的类型，里面包含了 4 个字段，类型各不相同。
+
+3.修改索引的副本数
+通过 API 来修改索引的副本数：
+curl -X PUT http://127.0.0.1:9200/commodity/_settings -d '{
+    "number_of_replicas": 3
+}'
+
+返回结果：
+{"acknowledged":true}
