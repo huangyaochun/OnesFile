@@ -1,0 +1,39 @@
+参考链接：https://www.jianshu.com/p/f000e05f3512
+
+Linux安装jdk
+一、jdk下载
+下载地址:https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+安装包有rpm包和tar包，选择下载tar包：
+
+二、卸载已有jdk
+1.查看已安装jdk： rpm -qa|grep java 
+
+三、安装jdk
+1.将下载好的安装包 jdk-8u151-linux-x64.tar.gz 上传到服务器指定目录下； /usr/local/src
+
+2.解压安装包： tar -zxvf jdk-8u151-linux-x64.tar.gz -C /usr/local/java  (先创建目录：mkdir /usr/local/java )
+
+3.安装地址：/usr/local/java/jdk1.8.0_151
+
+四、环境变量配置
+1.编辑/etc/profile文件 （所有的用户都可以使用 ）  或者 修改当前用户下的.profile 或者 .bash_profile #vi  .bash_profile （只有当前用户可以使用 ）
+vi /etc/profile  在最后面添加：
+
+export JAVA_HOME=/usr/local/java/jdk1.8.0_151
+export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export PATH=$PATH:$JAVA_HOME/bin
+#（！！！注意：JAVA_HOME的路径是你实际解压后的JDK的路径，千万别写错了）
+
+2.加载配置文件
+重新加载 source /etc/profile 
+
+3.使用 java -version 命令验证jdk是否安装成功:
+[root@localhost jdk1.8.0_151]# java -version
+java version "1.8.0_151"
+Java(TM) SE Runtime Environment (build 1.8.0_151-b12)
+Java HotSpot(TM) 64-Bit Server VM (build 25.151-b12, mixed mode)
+[root@localhost jdk1.8.0_151]# 
+
+
+
+
