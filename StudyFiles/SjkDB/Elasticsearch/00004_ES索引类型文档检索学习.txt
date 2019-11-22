@@ -1,0 +1,571 @@
+一、ES创建索引、类型、文档
+参考：https://blog.csdn.net/weixin_41297324/article/details/83758033
+
+1.文档元数据
+一个文档不只有数据。它还包含了元数据(metadata)——关于文档的信息。三个必须的元数据节点是：
+节点 	说明
+_index 	文档存储的地方
+_type 	文档代表的对象的类
+_id 	文档的唯一标识
+说明：
+_index：索引
+_type：类型
+_id：id仅仅是一个字符串，它与_index和_type组合时，就可以在Elasticsearch中唯一标识一个文档。当创建一个文档，你可以自定义_id，也可以让Elasticsearch帮你自动生成。
+
+2.创建索引，并新加一个文档 （PUT）
+curl -H 'Content-Type:application/json' -X PUT http://172.16.70.125:9200/blog/article/1 -d '
+{
+"id": "1",
+"title": "New version of Elasticsearch released!",
+"content": "Version 1.0 released today!",
+"priority": 10,
+"tags": ["announce", "elasticsearch", "release"]
+}'
+
+返回结果：
+{"_index":"blog","_type":"article","_id":"1","_version":1,"created":true}
+
+3.添加一个文档 （PUT）
+curl -H 'Content-Type:application/json' -X PUT http://172.16.70.125:9200/blog/article/2 -d '
+{
+"id": "2",
+"title": "新版本的Elasticsearch发布了！",
+"content": "今天发布了1.0版！ ",
+"priority": 10,
+"tags": ["宣布","弹性搜索","发布"]
+}'
+返回结果：
+{"_index":"blog","_type":"article","_id":"2","_version":1,"created":true}
+
+4.添加一个文档添加到某个_type下 （POST）
+curl -H 'Content-Type:application/json' -X POST http://172.16.70.125:9200/blog/article/ -d '
+{
+"id": "3",
+"title": "新版本的ES发布了！",
+"content": "今天发布了1.0N版！ ",
+"priority": 9,
+"tags": ["宣布","弹性搜索","发布"]
+}'
+返回结果：
+{"_index":"blog","_type":"article","_id":"AW6HYkvayiFJ2eaERfmx","_version":1,"created":true}
+
+5.添加一个文档 （POST）
+curl -H 'Content-Type:application/json' -X POST http://172.16.70.125:9200/blog/article/ -d '
+{
+"title": "New version of Elasticsearch released!",
+"content": "Version 1.0 released today!",
+"priority": 10,
+"tags": ["announce", "elasticsearch", "release"]
+}'
+
+5.删除文档 (DELETE)
+curl -X DELETE http://172.16.70.125:9200/blog/article/1 
+返回结果：
+{"found":true,"_index":"blog","_type":"article","_id":"1","_version":4}
+
+二、检索文档
+参考：https://blog.csdn.net/gwd1154978352/article/details/82804942
+
+1.浏览器中输入地址：
+http://172.16.70.125:9200/blog/article/2?pretty
+{
+  "_index" : "blog",
+  "_type" : "article",
+  "_id" : "2",
+  "_version" : 1,
+  "found" : true,
+  "_source":
+{
+"id": "2",
+"title": "新版本的Elasticsearch发布了！",
+"content": "今天发布了1.0版！ ",
+"priority": 10,
+"tags": ["宣布","弹性搜索","发布"]
+}
+}
+
+或者 curl -H 'Content-Type:application/json' -X GET http://172.16.70.125:9200/blog/article/1?pretty
+C:\Users\52702>curl -H 'Content-Type:application/json' -X GET http://172.16.70.125:9200/blog/article/1?pretty
+{
+  "_index" : "blog",
+  "_type" : "article",
+  "_id" : "1",
+  "found" : false
+}
+
+说明：
+响应包含了现在熟悉的元数据节点，增加了_source字段，它包含了在创建索引时我们发送给Elasticsearch的原始文档。
+pretty：在任意的查询字符串中增加pretty参数，类似于上面的例子。会让Elasticsearch美化输出(pretty-print)JSON响应以便更加容易阅读。
+_source字段不会被美化，它的样子与我们输入的一致，现在只包含我们请求的字段，而且过滤了date字段。
+
+2.只想得到_source字段而不要其他的元数据，可以这样请求：
+[root@localhost elasticsearch-1.4.1]# curl -H 'Content-Type:application/json' -X GET http://172.16.70.125:9200/blog/article/2/_source
+{
+"id": "2",
+"title": "新版本的Elasticsearch发布了！",
+"content": "今天发布了1.0版！ ",
+"priority": 10,
+"tags": ["宣布","弹性搜索","发布"]
+}
+
+说明：
+请求返回的响应内容包括{"found": true}。这意味着文档已经找到。
+如果请求一个不存在的文档，依旧会得到一个JSON，不过found值变成了false。此外，HTTP响应状态码也会变成'404 Not Found'代替'200 OK'。
+
+3.我们可以在curl后加-i参数得到响应头：
+[root@localhost elasticsearch-1.4.1]# curl -H 'Content-Type:application/json' -i -XGET http://172.16.70.125:9200/blog/article/2?pretty
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Content-Length: 276
+
+{
+  "_index" : "blog",
+  "_type" : "article",
+  "_id" : "2",
+  "_version" : 1,
+  "found" : true,
+  "_source":
+{
+"id": "2",
+"title": "新版本的Elasticsearch发布了！",
+"content": "今天发布了1.0版！ ",
+"priority": 10,
+"tags": ["宣布","弹性搜索","发布"]
+}
+}
+
+[root@localhost elasticsearch-1.4.1]# curl -H 'Content-Type:application/json' -i -XGET http://172.16.70.125:9200/blog/article/1?pretty
+HTTP/1.1 404 Not Found
+Content-Type: application/json; charset=UTF-8
+Content-Length: 81
+
+{
+  "_index" : "blog",
+  "_type" : "article",
+  "_id" : "1",
+  "found" : false
+}
+
+4.更新文档
+[root@localhost elasticsearch-1.4.1]# curl -H 'Content-Type:application/json' -XPOST http://localhost:9200/blog/article/2/_update -d '{
+> "script": "ctx._source.content = \"今天发布了1.1版\""
+> }'
+
+返回结果：
+{"_index":"blog","_type":"article","_id":"2","_version":2}
+
+验证 content 已更新
+
+
+######### ######## ########## #########
+
+三、数据处理——查询
+1. 获取所有数据 GET /_search
+[root@localhost elasticsearch-1.4.1]# curl -H 'Content-Type:application/json' -X GET http://172.16.70.125:9200/blog/article/_search?pretty
+{
+  "took" : 7,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 2,
+    "max_score" : 1.0,
+    "hits" : [ {
+      "_index" : "blog",
+      "_type" : "article",
+      "_id" : "AW6HYkvayiFJ2eaERfmx",
+      "_score" : 1.0,
+      "_source":
+{
+"id": "3",
+"title": "新版本的ES发布了！",
+"content": "今天发布了1.0N版！ ",
+"priority": 9,
+"tags": ["宣布","弹性搜索","发布"]
+}
+    }, {
+      "_index" : "blog",
+      "_type" : "article",
+      "_id" : "2",
+      "_score" : 1.0,
+      "_source":{"id":"2","title":"新版本的Elasticsearch发布了！","content":"今天发布了1.1版","priority":10,"tags":["宣布","弹性搜索","发布"]}
+    } ]
+  }
+}
+
+说明： 返回数据含义
+took ：耗费了几毫秒
+timed_out ：是否超时，false是没有，默认无timeout
+_shards ：碎片shards fail 的条件（primary和replica全部挂掉），不影响其他shard。默认情况下来说，一个搜索请求，会打到一个index的所有primary shard上去，当然了，每个primary shard都可能会有一个或多个replic shard，所以请求也可以到primary shard的其中一个replica shard上去。
+hits.total ：本次搜索，返回了几条结果
+hits.max_score ：score的含义，就是document对于一个search的相关度的匹配分数，越相关，就越匹配，分数也高
+hits.hits ：包含了匹配搜索的document的详细数据，默认查询前10条数据，按_score降序排序
+
+
+2.
+timeout这边默认是没有的，也就意味着当你搜索的时候他会直到所有搜索结束才会返回结果，但是当我们做一些时间比较敏感的搜索的时候，等待时间很久，对用户来说是非常不友好的。那我们可以通过设置timeout这个值，来定时返回已经搜索到的数据。timeout机制，指定每个shard，就只能在timeout时间范围内，将搜索到的部分数据（也可能是搜索到的全部数据），直接返回给client，而不是等到所有数据全部搜索出来后再返回。
+
+可以通过如下方式进行设置
+timeout=10ms，timeout=1s，timeout=1m
+GET /_search?timeout=10m
+ 
+网页请求：
+http://172.16.70.125:9200/blog/article/_search?timeout=10m&pretty
+{
+  "took" : 3,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 2,
+    "max_score" : 1.0,
+    "hits" : [ {
+      "_index" : "blog",
+      "_type" : "article",
+      "_id" : "AW6HYkvayiFJ2eaERfmx",
+      "_score" : 1.0,
+      "_source":
+{
+"id": "3",
+"title": "新版本的ES发布了！",
+"content": "今天发布了1.0N版！ ",
+"priority": 9,
+"tags": ["宣布","弹性搜索","发布"]
+}
+    }, {
+      "_index" : "blog",
+      "_type" : "article",
+      "_id" : "2",
+      "_score" : 1.0,
+      "_source":{"id":"2","title":"新版本的Elasticsearch发布了！","content":"今天发布了1.1版","priority":10,"tags":["宣布","弹性搜索","发布"]}
+    } ]
+  }
+}
+
+#######################
+#######索引文档处理
+
+1.创建Document
+PUT /ecommerce/product/1
+{
+    "name" : "gaolujie yagao",
+    "desc" :  "gaoxiao meibai",
+    "price" :  30,
+    "producer" :      "gaolujie producer",
+    "tags": [ "meibai", "fangzhu" ]
+}
+PUT /ecommerce/product/2
+{
+    "name" : "jiajieshi yagao",
+    "desc" :  "youxiao fangzhu",
+    "price" :  25,
+    "producer" :      "jiajieshi producer",
+    "tags": [ "fangzhu" ]
+}
+PUT /ecommerce/product/3
+{
+    "name" : "zhonghua yagao",
+    "desc" :  "caoben zhiwu",
+    "price" :  40,
+    "producer" :      "zhonghua producer",
+    "tags": [ "qingxin" ]
+}
+ 
+2.检索文档（查询）
+GET /ecommerce/product/1
+{
+
+    "_index": "ecommerce",
+    "_type": "product",
+    "_id": "1",
+    "_version": 1,
+    "found": true,
+    "_source": {
+        "name": "gaolujie yagao",
+        "desc": "gaoxiao meibai",
+        "price": 30,
+        "producer": "gaolujie producer",
+        "tags": [
+            "meibai"
+            ,
+            "fangzhu"
+        ]
+    }
+
+}
+
+3.替换文档（全量替换）
+PUT /ecommerce/product/1
+{
+    "name" : "jiaqiangban gaolujie yagao",
+    "desc" :  "gaoxiao meibai",
+    "price" :  30,
+    "producer" :      "gaolujie producer",
+    "tags": [ "meibai", "fangzhu" ]
+}
+
+返回结果：
+{
+    "_index": "ecommerce",
+    "_type": "product",
+    "_id": "1",
+    "_version": 2,
+    "created": false
+}
+
+用curl命令更新
+curl -H 'Content-Type:application/json' -X PUT http://172.16.70.125:9200/ecommerce/product/1 -d '{
+    "name" : "jiaqiangbans gaolujie yagao",
+    "desc" :  "gaoxiao meibai",
+    "price" :  30,
+    "producer" :      "gaolujie producer",
+    "tags": [ "meibai", "fangzhu" ]
+}'
+返回结果：{"_index":"ecommerce","_type":"product","_id":"1","_version":3,"created":false}
+
+注意点：
+  1.document是不可变的，如果要修改document的内容，可以通过全量替换，直接对document重新建立索引，替换里面所有的内容。
+  2.es会将老的document标记为deleted（逻辑删除），然后新增我们给定的一个document，当我们创建越来越多的document的时候，es会在适当的时机在后台自动删除（物理删除）标记为deleted的document。
+  3.替换必须带上所有的field，否则其他数据会丢失。
+
+4.更新文档（修改）
+POST /ecommerce/product/1/_update
+{
+  "doc": {
+    "name": "jiaqiangban gaolujie yagao"
+  }
+}
+
+返回结果：
+{
+    "_index": "ecommerce",
+    "_type": "product",
+    "_id": "1",
+    "_version": 4
+}
+
+5.删除文档（删除）
+DELETE /ecommerce/product/1
+
+返回结果：
+{
+    "found": true,
+    "_index": "ecommerce",
+    "_type": "product",
+    "_id": "1",
+    "_version": 5
+}
+
+注意：
+在删除一个document之后，我们可以从侧面证明，它不是立即物理删除的，因为它的一些版本号等信息还是保留的。
+
+#######################
+#######请求分类
+
+1、query string search
+类似这种 搜索全部商品：GET /ecommerce/product/_search（参数直接拼接在请求url上，不带json参数的）
+query string search的由来，因为search参数都是以http请求的query string来附带的
+搜索商品名称中包含yagao的商品，而且按照售价降序排序：
+GET /ecommerce/product/_search?q=name:yagao&sort=price:desc
+适用于临时的在命令行使用一些工具，比如curl，快速的发出请求，来检索想要的信息；但是如果查询请求很复杂，是很难去构建的，所以在生产环境中，几乎很少使用query string search
+
+浏览器访问：
+http://172.16.70.125:9200/ecommerce/product/_search?q=name:yagao&sort=price:desc&pretty
+返回结果：
+{
+  "took" : 6,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 2,
+    "max_score" : null,
+    "hits" : [ {
+      "_index" : "ecommerce",
+      "_type" : "product",
+      "_id" : "3",
+      "_score" : null,
+      "_source":{"name":"zhonghua yagao","desc":"caoben zhiwu","price":40,"producer":"zhonghua producer","tags":["qingxin"]},
+      "sort" : [ 40 ]
+    }, {
+      "_index" : "ecommerce",
+      "_type" : "product",
+      "_id" : "2",
+      "_score" : null,
+      "_source":{"name":"jiajieshi yagao","desc":"youxiao fangzhu","price":25,"producer":"jiajieshi producer","tags":["fangzhu"]},
+      "sort" : [ 25 ]
+    } ]
+  }
+}
+
+http://172.16.70.125:9200/blog/article/_search/?q=title:新版本的&sort=id:desc
+返回结果：
+{"took":11,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":2,"max_score":null,"hits":[{"_index":"blog","_type":"article","_id":"AW6HYkvayiFJ2eaERfmx","_score":null,"_source":
+{
+"id": "3",
+"title": "新版本的ES发布了！",
+"content": "今天发布了1.0N版！ ",
+"priority": 9,
+"tags": ["宣布","弹性搜索","发布"]
+},"sort":["3"]},{"_index":"blog","_type":"article","_id":"2","_score":null,"_source":{"id":"2","title":"新版本的Elasticsearch发布了！","content":"今天发布了1.1版","priority":10,"tags":["宣布","弹性搜索","发布"]},"sort":["2"]}]}}
+
+
+2、query DSL
+DSL：Domain Specified Language，特定领域的语言
+http request body：请求体，可以用json的格式来构建查询语法，比较方便，可以构建各种复杂的语法，比query string search肯定强大多了。
+更加适合生产环境的使用，可以构建复杂的查询
+
+1.查询所有的商品
+GET /ecommerce/product/_search
+{
+  "query": { "match_all": {} }
+}
+    
+2.查询名称包含yagao的商品，同时按照价格降序排序    
+GET /ecommerce/product/_search
+{
+    "query" : {
+        "match" : {
+            "name" : "yagao"
+        }
+    },
+    "sort": [
+        { "price": "ASC" }
+    ]
+}
+
+3.分页查询
+总共3条商品，假设每页就显示1条商品，现在显示第2页，所以就查出来第2个商品
+GET /ecommerce/product/_search
+{
+  "query": { "match_all": {} },
+  "from": 1,
+  "size": 1
+}
+
+4.查询指定项
+指定要查询出来商品的名称和价格
+GET /ecommerce/product/_search
+{
+  "query": { "match_all": {} },
+  "_source": ["name", "price"]
+}
+
+5.过滤查询
+搜索商品名称包含yagao，而且售价大于30元的商品
+GET /ecommerce/product/_search
+{
+
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "name": "yagao"
+                    }
+                }
+                ,
+                {
+                    "range": {
+                        "price": {
+                            "gt": "30"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+
+}
+
+[root@localhost elasticsearch-1.4.1]# curl -H 'Content-Type:application/json' -X GET http://172.16.70.125:9200/ecommerce/product/_search -d '{
+>     "query" : {
+>         "bool" : {
+>             "must" : [{
+>                 "match" : {
+>                     "name" : "yagao" 
+>                 }
+>             },
+>             {
+>                 "range" : {
+>                     "price" : { "gt" : 30 } 
+>                 }
+>             }]
+>         }
+>     }
+> }'
+{"took":4,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":1,"max_score":1.0122644,"hits":[{"_index":"ecommerce","_type":"product","_id":"3","_score":1.0122644,"_source":{"name":"zhonghua yagao","desc":"caoben zhiwu","price":40,"producer":"zhonghua producer","tags":["qingxin"]}}]}}
+
+6.full-text search（全文检索）
+GET /ecommerce/product/_search
+{
+    "query" : {
+        "match" : {
+            "producer" : "yagao producer"
+        }
+    }
+}
+
+说明： producer字段 含有任意一个词的 都能匹配到
+
+7.phrase search（短语搜索）
+跟全文检索相对应，相反，全文检索会将输入的搜索串拆解开来，去倒排索引里面去一一匹配，只要能匹配上任意一个拆解后的单词，就可以作为结果返回
+phrase search，要求输入的搜索串，必须在指定的字段文本中，完全包含一模一样的，才可以算匹配，才能作为结果返回
+GET /ecommerce/product/_search
+{
+    "query" : {
+        "match_phrase" : {
+            "producer" : "yagao producer"
+        }
+    }
+}
+
+8.多条件查询
+名字中有"yagao"，描述上可以有fangzhu也可以没有，价格不能是25元
+must 表示一定要满足；
+should 表示可以满足也可以不满足；
+must_not 表示不能满足该条件；
+"minimum_should_match": 1，表示最小匹配度，可以设置为百分百，详情看源文档Elasticsearch Reference [6.4] » Query DSL » Minimum Should Match，(https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-minimum-should-match.html)设置了这个值的时候就必须满足should里面的设置了，另外注意这边should里面同一字段设置的多个值（意思是当这个值等于X或者等于Y的时候都成立，务必注意格式）
+GET /ecommerce/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "name": "yagao"
+          }
+        }
+      ],
+      "should": [
+        {
+          "match": {
+            "desc": "fangzhu"
+          }
+        },
+        {
+          "match": {
+            "desc": "caoben"
+          }
+        }
+      ],
+      "must_not": [
+        {
+          "match": {
+            "price": 25
+          }
+        }
+      ],
+     "minimum_should_match": 1
+    }
+  }
+}

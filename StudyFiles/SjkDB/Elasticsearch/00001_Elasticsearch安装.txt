@@ -48,6 +48,11 @@ root       2442      1  2 18:32 pts/0    00:00:14 /usr/local/java/jdk1.8.0_151/b
 
 杀掉进程 kill -9 2442 （进程号）
 
+或者：
+使用REST API方式：
+curl -XPOST 'http://172.16.70.124:9200/_shutdown'
+返回结果：{"cluster_name":"elasticsearch","nodes":{"iKu6ytFhRkuN-amoUdnvIA":{"name":"Molecule Man"}}}
+
  
 
 4.访问 http://172.16.71.141:9200/?pretty 就可以看到类似下面的返回： 
