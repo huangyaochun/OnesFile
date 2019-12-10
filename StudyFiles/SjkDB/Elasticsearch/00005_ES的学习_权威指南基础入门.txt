@@ -104,10 +104,9 @@ curl -X GET "172.16.70.124:9200/megacorp/employee/1?pretty"
     "about" :      "I love to go rock climbing",
     "interests": [ "sports", "music" ]
 }
-
 }
 
-
+将 HTTP 命令由 PUT 改为 GET 可以用来检索文档，同样的，可以使用 DELETE 命令来删除文档，以及使用 HEAD 指令来检查文档是否存在。如果想更新已存在的文档，只需再次 PUT 。
 
 
 
