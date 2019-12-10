@@ -1,33 +1,33 @@
-²Î¿¼Á´½Ó£ºhttps://www.jianshu.com/p/f000e05f3512
+å‚è€ƒé“¾æ¥ï¼šhttps://www.jianshu.com/p/f000e05f3512
 
-Linux°²×°jdk
-Ò»¡¢jdkÏÂÔØ
-ÏÂÔØµØÖ·:https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-°²×°°üÓĞrpm°üºÍtar°ü£¬Ñ¡ÔñÏÂÔØtar°ü£º
+Linuxå®‰è£…jdk
+ä¸€ã€jdkä¸‹è½½
+ä¸‹è½½åœ°å€:https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+å®‰è£…åŒ…æœ‰rpmåŒ…å’ŒtaråŒ…ï¼Œé€‰æ‹©ä¸‹è½½taråŒ…ï¼š
 
-¶ş¡¢Ğ¶ÔØÒÑÓĞjdk
-1.²é¿´ÒÑ°²×°jdk£º rpm -qa|grep java 
+äºŒã€å¸è½½å·²æœ‰jdk
+1.æŸ¥çœ‹å·²å®‰è£…jdkï¼š rpm -qa|grep java 
 
-Èı¡¢°²×°jdk
-1.½«ÏÂÔØºÃµÄ°²×°°ü jdk-8u151-linux-x64.tar.gz ÉÏ´«µ½·şÎñÆ÷Ö¸¶¨Ä¿Â¼ÏÂ£» /usr/local/src
+ä¸‰ã€å®‰è£…jdk
+1.å°†ä¸‹è½½å¥½çš„å®‰è£…åŒ… jdk-8u151-linux-x64.tar.gz ä¸Šä¼ åˆ°æœåŠ¡å™¨æŒ‡å®šç›®å½•ä¸‹ï¼› /usr/local/src
 
-2.½âÑ¹°²×°°ü£º tar -zxvf jdk-8u151-linux-x64.tar.gz -C /usr/local/java  (ÏÈ´´½¨Ä¿Â¼£ºmkdir /usr/local/java )
+2.è§£å‹å®‰è£…åŒ…ï¼š tar -zxvf jdk-8u151-linux-x64.tar.gz -C /usr/local/java  (å…ˆåˆ›å»ºç›®å½•ï¼šmkdir /usr/local/java )
 
-3.°²×°µØÖ·£º/usr/local/java/jdk1.8.0_151
+3.å®‰è£…åœ°å€ï¼š/usr/local/java/jdk1.8.0_151
 
-ËÄ¡¢»·¾³±äÁ¿ÅäÖÃ
-1.±à¼­/etc/profileÎÄ¼ş £¨ËùÓĞµÄÓÃ»§¶¼¿ÉÒÔÊ¹ÓÃ £©  »òÕß ĞŞ¸Äµ±Ç°ÓÃ»§ÏÂµÄ.profile »òÕß .bash_profile #vi  .bash_profile £¨Ö»ÓĞµ±Ç°ÓÃ»§¿ÉÒÔÊ¹ÓÃ £©
-vi /etc/profile  ÔÚ×îºóÃæÌí¼Ó£º
+å››ã€ç¯å¢ƒå˜é‡é…ç½®
+1.ç¼–è¾‘/etc/profileæ–‡ä»¶ ï¼ˆæ‰€æœ‰çš„ç”¨æˆ·éƒ½å¯ä»¥ä½¿ç”¨ ï¼‰  æˆ–è€… ä¿®æ”¹å½“å‰ç”¨æˆ·ä¸‹çš„.profile æˆ–è€… .bash_profile #vi  .bash_profile ï¼ˆåªæœ‰å½“å‰ç”¨æˆ·å¯ä»¥ä½¿ç”¨ ï¼‰
+vi /etc/profile  åœ¨æœ€åé¢æ·»åŠ ï¼š
 
 export JAVA_HOME=/usr/local/java/jdk1.8.0_151
 export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 export PATH=$PATH:$JAVA_HOME/bin
-#£¨£¡£¡£¡×¢Òâ£ºJAVA_HOMEµÄÂ·¾¶ÊÇÄãÊµ¼Ê½âÑ¹ºóµÄJDKµÄÂ·¾¶£¬Ç§Íò±ğĞ´´íÁË£©
+#ï¼ˆï¼ï¼ï¼æ³¨æ„ï¼šJAVA_HOMEçš„è·¯å¾„æ˜¯ä½ å®é™…è§£å‹åçš„JDKçš„è·¯å¾„ï¼Œåƒä¸‡åˆ«å†™é”™äº†ï¼‰
 
-2.¼ÓÔØÅäÖÃÎÄ¼ş
-ÖØĞÂ¼ÓÔØ source /etc/profile 
+2.åŠ è½½é…ç½®æ–‡ä»¶
+é‡æ–°åŠ è½½ source /etc/profile 
 
-3.Ê¹ÓÃ java -version ÃüÁîÑéÖ¤jdkÊÇ·ñ°²×°³É¹¦:
+3.ä½¿ç”¨ java -version å‘½ä»¤éªŒè¯jdkæ˜¯å¦å®‰è£…æˆåŠŸ:
 [root@localhost jdk1.8.0_151]# java -version
 java version "1.8.0_151"
 Java(TM) SE Runtime Environment (build 1.8.0_151-b12)
