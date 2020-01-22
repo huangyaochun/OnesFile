@@ -1,0 +1,60 @@
+##############1.安装
+
+参考：https://www.runoob.com/python3/python3-install.html
+
+Linux 平台安装 Python3
+python版本： Python 3.6.7
+1.打开WEB浏览器访问 https://www.python.org/downloads/source/
+Stable Releases  （稳定版）  Pre-releases （预发布）
+
+下载拷贝到linux
+/usr/local/src/Python-3.6.7.tgz
+
+解压缩：
+tar -zxvf Python-3.6.7.tgz -C /usr/local/
+
+执行：
+cd /usr/local/Python-3.6.7/
+./configure
+make && make install
+
+检查 Python3 是否正常可用：
+[root@localhost Python-3.6.7]# python3
+Python 3.6.7 (default, Jan 16 2020, 16:08:23) 
+[GCC 4.8.5 20150623 (Red Hat 4.8.5-39)] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+
+
+##############2.安装 模块
+参考链接：https://blog.csdn.net/df0128/article/details/88356401
+在linux系统中，由于yum使用python2，所以安装了python2.x，相应的也安装了pip工具，此时我需要用到python3，那么此时在使用之前的那个pip工具就无法为python3添加库了，故需要分开使用；
+1.进入python3的解压出来的安装包目录；
+cd /usr/local/Python-3.6.7/
+
+2.输入命令
+./configure --prefix=/usr/local/Python-3.6.7/ --enable-shared CFLAGS=-fPIC 
+（加上 --enable-shared 和 -fPIC 之后可以将python3的动态链接库编译出来,会安装pip3和setuptools等）
+
+3.再输入命令
+准备安装依赖包
+[root@localhost Python-3.6.7]#yum install zlib* openssl*
+[root@localhost Python-3.6.7]#make 
+[root@localhost Python-3.6.7]#make install  
+等待结束；
+
+4.建立一个软连接，使用命令
+ln -s /usr/local/Python-3.6.7/bin/pip3 /usr/bin/pip3 
+（/usr/python/bin/pip3为pip的安装目录，即python3的安装目录下的bin目录下）；
+
+5.之后就可以使用
+pip3 install package 来为python3安装包了
+
+安装测试：
+pip install wxpy
+pip install requests
+
+
+
+
+

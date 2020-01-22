@@ -67,9 +67,10 @@ def Url_Conn_down(url,title):
             j += 1
             print "Down is fail!"
     return resg
-
-if __name__=='__main__':
-    file = open('temp/readme.txt','w')
+    
+def main_hmmsghls():
+    #好妈妈胜过好老师的下载
+    file = open('temp/好妈妈胜过好老师Readme.txt','w')
     for i in range(56): #56
         url = 'http://dt.baobao88.com/au_play.php?id=' + str(151669 - i)
         print url
@@ -83,3 +84,7 @@ if __name__=='__main__':
         print text
         file.write(text + '\n')
     file.close()
+
+if __name__=='__main__':
+    main_hmmsghls()
+
