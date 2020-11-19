@@ -1,0 +1,115 @@
+本地安装Mysql
+******************参考：
+https://blog.csdn.net/amnb123/article/details/107598902
+
+1.下载mysql 
+所有历史版本的下载
+https://downloads.mysql.com/archives/community/
+
+下载完后，我们将 zip 包解压到相应的目录，
+D:\MySQL
+
+打开解压后文件夹：
+D:\MySQL\mysql-5.7.30-winx64
+
+2.设置配置文件
+        my.ini位置添加配置文件
+        [client]
+        # 设置mysql客户端默认字符集
+        default-character-set=utf8
+         
+        [mysqld]
+        # 设置3306端口
+        port = 3306
+        # 设置mysql的安装目录
+        basedir=D:\\MySQL\\mysql-5.7.30-winx64
+        # 设置 mysql数据库的数据的存放目录，MySQL 8+ 不需要以下配置，系统自己生成即可，否则有可能报错
+        # datadir=D:\\MySQL\\mysql-5.7.30-winx64\\Data
+        # 允许最大连接数
+        max_connections=20
+        # 服务端使用的字符集默认为8比特编码的latin1字符集
+        character-set-server=utf8
+        # 创建新表时将使用的默认存储引擎
+        default-storage-engine=INNODB
+        
+3.启动服务
+以管理员身份打开 cmd 命令行工具
+#D:\MySQL\mysql-5.7.30-winx64\bin\mysqld --defaults-file="D:\MySQL\mysql-5.7.30-winx64\my.ini" --console
+进入 D:\MySQL\mysql-5.7.30-winx64\bin\ 目录
+初始化数据库：
+mysqld --initialize --console
+
+得到密码行：A temporary password is generated for root@localhost: i*y%cerc;49A
+
+输入以下安装命令：
+mysqld install
+
+启动输入以下命令即可：
+net start mysql
+
+4.测试链接
+启动一个新的cmd窗口，执行下面的命令，测试连接mysql
+D:\MySQL\mysql-5.7.30-winx64\bin\mysql -u root -pi*y%cerc;49A
+
+5.重置密码：
+ERROR 1820 (HY000): You must reset your password using ALTER USER statement before executing this statement.
+错误1820（HY000）：在执行此语句之前，必须使用ALTER USER语句重置密码。
+
+处理方法：
+mysql> alter user 'root'@'localhost' identified by '123root'
+Query OK, 0 rows affected (0.01 sec)
+
+或者 ：set password = password('123root');
+
+mysql> flush privileges;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select version()
+    -> ;
++------------+
+| version()  |
++------------+
+| 5.7.30-log |
++------------+
+1 row in set (0.00 sec)
+
+mysql> quit
+
+重新测试登陆：
+D:\MySQL\mysql-5.7.30-winx64\bin\mysql -P 3306 -u root -p123root
+D:\MySQL\mysql-5.7.30-winx64\bin\mysql -u root -p123root 
+测试登陆 没问题
+
+6.关闭测试服务:
+net stop mysql 
+或者
+D:\MySQL\mysql-5.7.30-winx64\bin\mysqladmin -u root -p shutdown
+mysqladmin: connect to server at 'localhost' failed
+error: 'Can't connect to MySQL server on 'localhost' (10061)'
+Check that mysqld is running on localhost and that the port is 3306.
+You can check this by doing 'telnet localhost 3306'
+
+
+*************
+添加windows服务，以windows服务的形式运行
+
+但管理员身份打开的cmd窗口执行下面的命令就可以了
+
+1.添加 服务名称：
+D:\MySQL\mysql-5.7.30-winx64\bin>D:\MySQL\mysql-5.7.30-winx64\bin\mysqld install MySQL5_7_30_3306 --defaults-file="D:\MySQL\mysql-5.7.30-winx64\my.ini"
+Service successfully installed.
+
+其中 MySQL5_7_30_3306 是我们自己命令的服务名称，这里使用mysql版本号和服务端口号来命名
+
+
+2.操作服务：
+net start MySQL5_7_30_3306
+
+net stop MySQL5_7_30_3306
+
+
+
+
+
+
+
